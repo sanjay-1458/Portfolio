@@ -60,8 +60,8 @@ function Header() {
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 1.2 }}
-          href="/#path.pdf"
-          download
+          href="https://drive.google.com/file/d/1FPO6z0IxiWc3ZAfCfy3TyFtd76KO-hwt/view?usp=sharing"
+          target="_blank"
           className="border rounded-full px-10 py-3 border-gray-500 flex items-center gap-2"
         >
           my resume <Image alt="" src={assets.download_icon} className="w-4" />
