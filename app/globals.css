@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Outfit;
+}
+.contact-section {
+  background-image: url("/footer-bg-color.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90% auto;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.color-lightHover {
+  color: #fcf4ff;
+}
+.color-darkHover {
+  color: #2a004a;
+}
+
+.color-darkTheme {
+  color: #11001f;
+}
+
+.boxShadowBlack {
+  box-shadow: 4px 4px 0 #000;
+}
+
+.boxShadowWhite {
+  box-shadow: 4px 4px 0 #fff;
+}
+.bg-lightHover {
+  background-color: #fcf4ff;
+}
+
+.bg-darkHover {
+  background-color: #2a004a;
+}
+
+html.dark .bg-darkTheme {
+  background-color: #11001f;
+}
+
+.font-Ovo {
+  font-family: "Ovo", serif;
+}
+
+.font-Outfit {
+  font-family: "Outfit", sans-serif;
+}
