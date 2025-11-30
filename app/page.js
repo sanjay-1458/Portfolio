@@ -9,10 +9,15 @@ import Navbar from "@/component/Navbar";
 import Projects from "@/component/Projects";
 import Skills from "@/component/Skills";
 import { useEffect, useState } from "react";
+import IntroAnimation from "@/component/IntroAnimation";
+import ParticleBackground from "@/component/ParticleBackground";
+import CustomCursor from "@/component/CustomCursor";
 
 
 export default function Home() {
   const [isDarkMode,setIsDarkMode]=useState(true);
+  const [introDone, setIntroDone] = useState(false);
+ 
   useEffect(()=>{
     if(isDarkMode){
       document.documentElement.classList.add('a')
@@ -24,7 +29,13 @@ export default function Home() {
     }
   },[isDarkMode]);
   return (
-    <>
+    <>{
+      !introDone && <IntroAnimation onFinish={() => setIntroDone(true)} />
+    }
+    {introDone &&
+      <div className="relative gradient text-white">
+        
+
     <Navbar/>
     <Header/>
     <About/>
@@ -34,6 +45,11 @@ export default function Home() {
     <Coding/>
     <Contact/>
     <Footer/>
+    
+    </div>
+    }
+
     </>
+
   );
 }

@@ -1,7 +1,20 @@
 import { assets, infoList, toolsData } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
+
+const darkGlowClass =
+  "shadow-lg shadow-[#00bf8f]/30 hover:shadow-[#00bf8f]/50 transition-shadow";
+
+const listItemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 100, damping: 12 },
+  },
+};
+
 function About() {
   return (
     <motion.div
@@ -9,99 +22,131 @@ function About() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="about"
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="w-full px-[12%] py-24 scroll-mt-20 bg-black text-white relative"
     >
-      <motion.h4
+      <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-center mb-2 text-lg font-Ovo"
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="flex justify-center mb-8"
       >
-        Introduction
-      </motion.h4>
+        <div className="px-6 py-2 rounded-full border border-indigo-600/50 bg-indigo-900/30 text-indigo-300 font-medium tracking-wider">
+          Introduction
+        </div>
+      </motion.div>
+
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-center text-5xl font-Ovo"
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="text-center text-5xl md:text-6xl font-extrabold text-white mb-16"
       >
-        About me
+        About me<span className="text-[#1cd8d2]">.</span>
       </motion.h2>
+
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="flex w-full w-max-4xl flex-col lg:flex-row items-center gap-20 my-20"
+        className="flex w-full max-w-7xl mx-auto flex-col lg:flex-row items-center justify-between gap-20 my-20"
       >
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="w-64 sm:w-80 rounded-4xl max-w-none "
+          initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+          whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+          className={`w-64 sm:w-80 rounded-2xl max-w-none p-4 border border-gray-700 ${darkGlowClass}`}
         >
           <Image
             src={assets.user_image}
             alt="user"
-            className="w-full rounded-4xl "
+            className="w-full rounded-xl object-cover"
           />
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex-1"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex-1 max-w-4xl"
         >
-          <p className="text-center mb-10 max-w-4xl font-Ovo">
-            I am a recent graduate Software Engineer eager to contribute to
-            real-world projects and kickstart my career. I focus on building
-            scalable solutions using SOLID principles and system design best
-            practices. I am passionate about competitive coding and solving
-            complex data structure and algorithm problems.
+          <p className="text-center lg:text-left mb-10 font-Ovo text-gray-300 leading-relaxed">
+            I’m a recent Software Engineering graduate who loves building scalable systems and solving challenging algorithm problems.
           </p>
+
           <motion.ul
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
+            initial="hidden"
+            whileInView="visible"
+            transition={{ staggerChildren: 0.1, delay: 0.8 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6"
           >
-            {infoList.map(({ icon, iconDark, title, description }, index) => (
+            {infoList.map(({ icon, title, description }, index) => (
               <motion.li
-                whileHover={{ scale: 1.05 }}
-                className="border-[0.5px] border-gray-400 rounded-xl cursor-pointer p-6 hover:bg-[#fcf4ff] hover:[box-shadow:4px_4px_0_#000] hover:-translate-y-1 duration-500"
+                variants={listItemVariants}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 0 20px rgba(0, 191, 143, 0.7)",
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 key={index}
+                className={`
+                  relative p-6 rounded-xl cursor-pointer 
+                  bg-gray-950/70 backdrop-blur-sm overflow-hidden 
+                  border border-gray-700 transition-all duration-300
+                  hover:border-[#00bf8f]
+                `}
               >
-                <Image src={icon} alt={title} className="w-7 mt-3" />
-                <h3 className="my-4 font-semibold text-gray-700">{title}</h3>
-                <p className="text-gray-600 text-sm">{description}</p>
+                <div
+                  className="absolute inset-0 rounded-xl pointer-events-none 
+                                border border-transparent transition-all duration-300 
+                                group-hover:border-[#00bf8f]/50"
+                ></div>
+
+                <Image
+                  src={icon}
+                  alt={title}
+                  className="w-8 mt-3 invert brightness-125"
+                />
+
+                <h3 className="my-4 font-bold text-lg text-white">{title}</h3>
+                <p className="text-gray-400 text-sm">{description}</p>
               </motion.li>
             ))}
           </motion.ul>
+
           <motion.h4
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.3 }}
-            className="my-6 text-gray-700 font-Ovo"
+            className="my-10 text-xl font-Ovo text-[#00bf8f]"
           >
-            Tools i use
+            Development Tools I Use
           </motion.h4>
+
           <motion.ul
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.5 }}
-            className="flex items-center gap-5 sm:gap-8"
+            initial="hidden"
+            whileInView="visible"
+            transition={{ staggerChildren: 0.05, delay: 1.4 }}
+            className="flex flex-wrap items-center gap-5 sm:gap-8"
           >
             {toolsData.map((tool, index) => {
               return (
                 <motion.li
-                whileHover={{scale:1.1}}
+                  variants={listItemVariants}
+                  whileHover={{
+                    scale: 1.25,
+                    rotate: 5,
+                    boxShadow: "0 0 15px rgba(28, 216, 210, 0.5)",
+                  }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   key={index}
-                  className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
+                  className="flex items-center justify-center w-12 sm:w-14 aspect-square border-2 border-gray-700 rounded-lg cursor-pointer bg-gray-950 duration-500 p-2"
                 >
                   <Image
                     src={tool}
                     alt="Tool"
-                    className="w-8 sm:w-10 h-8 sm:h-10"
+                    className="w-full h-full object-contain"
                   />
                 </motion.li>
               );

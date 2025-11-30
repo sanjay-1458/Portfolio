@@ -23,7 +23,7 @@ import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
 import mail_icon from "./mail_icon.png";
 import mail_icon_dark from "./mail_icon_dark.png";
-import profile_img from "./profile-img.png";
+import profile_img from "./user-image.png";
 import download_icon from "./download-icon.png";
 import hand_icon from "./hand-icon.png";
 import header_bg_color from "./header-bg-color.png";
@@ -43,6 +43,16 @@ import right_arrow from "./right-arrow.png";
 import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
+import javascript_icon from "./javascript-icon.png";
+import react_icon from "./react-icon.png";
+import node_icon from "./node-icon.png";
+import typescript_icon from "./typescript-icon.png";
+import docker_icon from "./docker-icon.png";
+import express_icon from "./express-icon.png";
+
+import git_icon from "./git-icon.png";
+import github_icon from "./github-icon.png";
+import play_icon from "./play-icon.png";
 
 export const assets = {
   work1,
@@ -90,62 +100,26 @@ export const assets = {
   send_icon,
   right_arrow_bold,
   right_arrow_bold_dark,
+  javascript_icon,
+  react_icon,
+  node_icon,
+  typescript_icon,
+  docker_icon,
+  express_icon,
+  git_icon, 
+  github_icon,
+  play_icon
 };
 
 export const workData = [
   {
     title: "AI Blog App",
-    description: "Generative AI Project",
+    description: "Built a full-stack AI-powered blog application , integrated Google Gemini API to generate blog content.",
     bgImage: assets.work1,
-    link:"https://github.com/sanjay-1458/AI-Blog-Application"
-  },
-  {
-    title: "Chat App",
-    description: "Using Websocket",
-    bgImage: assets.work2,
-    link:"https://github.com/sanjay-1458/Chat-Application"
-  },
-  {
-    title: "Movie Discovery",
-    description: "Web Design",
-    bgImage: assets.work3,
-    link:"https://github.com/sanjay-1458/Movie-Application-Appwrite"
-  },
-  {
-    title: "URL Shortner",
-    description: "Implemented Redis",
-    bgImage: assets.work4,
-    link:"https://github.com/sanjay-1458/URL-Shortener"
-  },
-];
-
-export const serviceData = [
-  {
-    icon: assets.web_icon,
-    title: "Web design",
-    description: "Web development is the process of building, programming...",
-    link: "",
-  },
-  {
-    icon: assets.mobile_icon,
-    title: "Mobile app",
-    description:
-      "Mobile app development involves creating software for mobile devices...",
-    link: "",
-  },
-  {
-    icon: assets.ui_icon,
-    title: "UI/UX design",
-    description:
-      "UI/UX design focuses on creating a seamless user experience...",
-    link: "",
-  },
-  {
-    icon: assets.graphics_icon,
-    title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
-    link: "",
-  },
+    github_link:"https://github.com/sanjay-1458/AI-Blog-Application",
+    link:"https://ai-blog-application.vercel.app/",
+    tags: ["React.js", "Node.js", "Gemini API"]
+  }
 ];
 
 export const infoList = [
@@ -153,7 +127,7 @@ export const infoList = [
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: "Languages",
-    description: "C++, JavaScript, HTML5, CSS3, SQL, React.js, Node.js",
+    description: "C, C++, JavaScript, TypeScript",
   },
   {
     icon: assets.edu_icon,
@@ -179,20 +153,14 @@ export const toolsData = [
 
 export const profiles = [
   {
-    platform: "LeetCode",
-    handle: "Knight",
-    rating: "Rating: 1906",
-    url: "https://leetcode.com/u/st2147/",
-    bgColor: "bg-blue-50",
-    textColor: "text-yellow-700",
+    platform: "LeetCode", 
+    description: "Knight on LeetCode with peak rating 1919+; ranked 1287 globally in Weekly Contest 451.",
+    url: "https://leetcode.com/u/st2147/", 
   },
   {
-    platform: "Codeforces",
-    handle: "Pupil",
-    rating: "Rating: 1340",
-    url: "https://codeforces.com/profile/sth_2108",
-    bgColor: "bg-blue-100",
-    textColor: "text-blue-800",
+    platform: "Codeforces", 
+    description: "Not yet added.",
+    url: "https://codeforces.com/profile/cf__2108",
   },
 ];
 export const experiences = [
@@ -202,9 +170,8 @@ export const experiences = [
     logo: assets.autodesk,
     duration: "July 2024 – Dec 2024",
     work: [
-      "Refactored React.js codebase to improve maintainability and performance; authored 10+ unit tests covering core components.",
-
-      "Developed a version‑sync script to align package versions across four microservice repositories; built & automated CI/CD pipelines in Jenkins to run both unit tests and end‑to‑end Cypress tests.",
+      "Refactored the Fusion Home application to simplify code structure and enhance maintainability, resulting in a 15% reduction in code complexity.",
+      "Built a script to fetch and manage version data across multiple services, helping reduce production deployment time by 30%.",
     ],
   },
   
