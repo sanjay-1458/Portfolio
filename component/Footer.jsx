@@ -34,7 +34,7 @@ function Footer() {
           </motion.div>
 
           <motion.a
-            href="mailto:sanjay.thakur21478@gmail.com"
+            href="mailto:sanjaythakur12001@gmail.com"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
@@ -44,7 +44,7 @@ function Footer() {
             <FaEnvelope
               className={`w-5 h-5 ${ACCENT_COLOR_CLASS} group-hover:text-white transition-colors duration-300`}
             />
-            sanjay.thakur21478@gmail.com
+            sanjaythakur12001@gmail.com
           </motion.a>
         </div>
 
@@ -56,7 +56,7 @@ function Footer() {
           viewport={{ once: true }}
         >
           <p className="order-2 sm:order-1 text-sm text-gray-400">
-            &copy; 2025 Sanjay Thakur. All rights reserved.
+            &copy; 2026 Sanjay Thakur. All rights reserved.
           </p>
 
           <ul className="flex items-center gap-6 justify-center order-1 sm:order-2 mt-6 sm:mt-0">
