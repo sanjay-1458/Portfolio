@@ -113,12 +113,36 @@ export const assets = {
 
 export const workData = [
   {
+    title: "Movie Ticket Booking App",
+    description: "Developed a show booking app with role base access, along with seat reservation and notification.",
+    bgImage: assets.work2,
+    github_link:"https://github.com/sanjay-1458/Movie-Ticket-Booking",
+    link:"https://quickshow-sigma-lyart.vercel.app/",
+    tags: ["React.js", "TypeScript", "Express","MongoDB"]
+  },
+  {
     title: "AI Blog App",
     description: "Built a full-stack AI-powered blog application , integrated Google Gemini API to generate blog content.",
     bgImage: assets.work1,
     github_link:"https://github.com/sanjay-1458/AI-Blog-Application",
     link:"https://ai-blog-application.vercel.app/",
-    tags: ["React.js", "Node.js", "Gemini API"]
+    tags: ["React.js", "Node.js", "Gemini API","JWT"]
+  },
+  {
+    title: "Movie Fetcher",
+    description: "Designed a simple application to fetch latest movie from TMDB API.",
+    bgImage: assets.work3,
+    github_link:"https://github.com/sanjay-1458/Movie-Application-Appwrite",
+    link:"https://movie-application-appwrite.vercel.app/",
+    tags: ["React.js", "TMDB",]
+  },
+  {
+    title: "URL Shortner",
+    description: "Implemented a mechanism to shrink the long URLs and used cache for commonly searched URLs.",
+    bgImage: assets.work4,
+    github_link:"https://github.com/sanjay-1458/URL-Shortener",
+    link:"https://url-shortener-chi-eight.vercel.app/",
+    tags: ["Redis", "Base62",]
   }
 ];
 
@@ -159,7 +183,7 @@ export const profiles = [
   },
   {
     platform: "Codeforces", 
-    description: "Not yet added.",
+    description: "Not active.",
     url: "https://codeforces.com/profile/cf__2108",
   },
 ];
@@ -171,7 +195,7 @@ export const experiences = [
     duration: "July 2024 – Dec 2024",
     work: [
       "Refactored the Fusion Home application to simplify code structure and enhance maintainability, resulting in a 15% reduction in code complexity.",
-      "Built a script to fetch and manage version data across multiple services, helping reduce production deployment time by 30%.",
+      "Built a script to fetch and manage version across multiple services, helping reduce production deployment time by 30%.",
     ],
   },
   
