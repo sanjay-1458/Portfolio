@@ -24,11 +24,7 @@ const socials = [
     label: "LeetCode",
     href: "https://leetcode.com/u/st2147/",
   },
-  {
-    Icon: SiCodeforces,
-    label: "Codeforces",
-    href: "https://codeforces.com/profile/cf__2108",
-  },
+ 
 ];
 
 const glowVariants = {

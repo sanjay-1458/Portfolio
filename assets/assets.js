@@ -8,10 +8,10 @@ import project_icon_dark from "./project-icon-dark.png";
 import vscode from "./vscode.png";
 import autodesk from "./autodesk.png";
 import postman from "./postman.png";
-import work1 from './public/work-1.png'
-import work2 from './public/work-2.png'
-import work3 from './public/work-3.png'
-import work4 from './public/work-4.png'
+import work1 from "./public/work-1.png";
+import work2 from "./public/work-2.png";
+import work3 from "./public/work-3.png";
+import work4 from "./public/work-4.png";
 import github from "./github.png";
 import jenkins from "./jenkins.png";
 import firebase from "./firebase.png";
@@ -106,44 +106,48 @@ export const assets = {
   typescript_icon,
   docker_icon,
   express_icon,
-  git_icon, 
+  git_icon,
   github_icon,
-  play_icon
+  play_icon,
 };
 
 export const workData = [
   {
     title: "Movie Ticket Booking App",
-    description: "Developed a show booking app with role base access, along with seat reservation and notification.",
+    description:
+      "Developed a show booking app with role base access, along with seat reservation and notification.",
     bgImage: assets.work2,
-    github_link:"https://github.com/sanjay-1458/Movie-Ticket-Booking",
-    link:"https://quickshow-sigma-lyart.vercel.app/",
-    tags: ["React.js", "TypeScript", "Express","MongoDB"]
+    github_link: "https://github.com/sanjay-1458/Movie-Ticket-Booking",
+    link: "https://quickshow-sigma-lyart.vercel.app/",
+    tags: ["React.js", "TypeScript", "Express", "MongoDB"],
   },
   {
     title: "AI Blog App",
-    description: "Built a full-stack AI-powered blog application , integrated Google Gemini API to generate blog content.",
+    description:
+      "Built a full-stack AI-powered blog application , integrated Google Gemini API to generate blog content.",
     bgImage: assets.work1,
-    github_link:"https://github.com/sanjay-1458/AI-Blog-Application",
-    link:"https://ai-blog-application.vercel.app/",
-    tags: ["React.js", "Node.js", "Gemini API","JWT"]
+    github_link: "https://github.com/sanjay-1458/AI-Blog-Application",
+    link: "https://ai-blog-application.vercel.app/",
+    tags: ["React.js", "Node.js", "Gemini API", "JWT"],
   },
   {
     title: "Movie Fetcher",
-    description: "Designed a simple application to fetch latest movie from TMDB API.",
+    description:
+      "Designed a simple application to fetch latest movie from TMDB API.",
     bgImage: assets.work3,
-    github_link:"https://github.com/sanjay-1458/Movie-Application-Appwrite",
-    link:"https://movie-application-appwrite.vercel.app/",
-    tags: ["React.js", "TMDB",]
+    github_link: "https://github.com/sanjay-1458/Movie-Application-Appwrite",
+    link: "https://movie-application-appwrite.vercel.app/",
+    tags: ["React.js", "TMDB"],
   },
   {
     title: "URL Shortner",
-    description: "Implemented a mechanism to shrink the long URLs and used cache for commonly searched URLs.",
+    description:
+      "Implemented a mechanism to shrink the long URLs and used cache for commonly searched URLs.",
     bgImage: assets.work4,
-    github_link:"https://github.com/sanjay-1458/URL-Shortener",
-    link:"https://url-shortener-chi-eight.vercel.app/",
-    tags: ["Redis", "Base62",]
-  }
+    github_link: "https://github.com/sanjay-1458/URL-Shortener",
+    link: "https://url-shortener-chi-eight.vercel.app/",
+    tags: ["Redis", "Base62"],
+  },
 ];
 
 export const infoList = [
@@ -177,14 +181,10 @@ export const toolsData = [
 
 export const profiles = [
   {
-    platform: "LeetCode", 
-    description: "Knight on LeetCode with peak rating 1919+; ranked 1287 globally in Weekly Contest 451.",
-    url: "https://leetcode.com/u/st2147/", 
-  },
-  {
-    platform: "Codeforces", 
-    description: "Not active.",
-    url: "https://codeforces.com/profile/cf__2108",
+    platform: "LeetCode",
+    description:
+      "Knight on LeetCode with peak rating 1900+; ranked 1033 globally in Bi-Weekly Contest 155.",
+    url: "https://leetcode.com/u/st2147/",
   },
 ];
 export const experiences = [
@@ -198,5 +198,4 @@ export const experiences = [
       "Built a script to fetch and manage version across multiple services, helping reduce production deployment time by 30%.",
     ],
   },
-  
 ];
