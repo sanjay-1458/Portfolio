@@ -113,7 +113,7 @@ function Skills() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="max-w-3xl text-gray-300 p-6 border border-gray-700 bg-gray-900/90 mt-8 shadow-xl rounded-lg mx-auto text-center"
         >
-          I work with the MERN stack to build full-stack apps and rely on C++ for solid problem-solving and system-level insight.
+          I build projects with MERN stack and rely on C++ / Java fundamenatal for problem-solving and system-level insight.
         </motion.p>
 
         <motion.div
