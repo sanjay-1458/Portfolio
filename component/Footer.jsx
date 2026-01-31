@@ -44,7 +44,7 @@ function Footer() {
             <FaEnvelope
               className={`w-5 h-5 ${ACCENT_COLOR_CLASS} group-hover:text-white transition-colors duration-300`}
             />
-            sanjaythakur12001@gmail.com
+            sanjay2100012@gmail.com
           </motion.a>
         </div>
 
