@@ -194,8 +194,8 @@ export const experiences = [
     logo: assets.autodesk,
     duration: "July 2024 – Dec 2024",
     work: [
-      "Refactored the Fusion Home application to simplify code structure and enhance maintainability, resulting in a 15% reduction in code complexity.",
-      "Built a script to fetch and manage version across multiple services, helping reduce production deployment time by 30%.",
+"Developed a Node.js automation script to automatically validate and align dependency versions across microservices, eliminating version conflict before deployment.",
+"Refactored the core legacy module into modular, reusable components, improving separation of concerns, reducing code complexity and improving testability and long-term maintainability."
     ],
   },
 ];
