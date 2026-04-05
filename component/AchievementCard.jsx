@@ -11,7 +11,7 @@ const SleepingCat = () => {
       setCatState("scratch");
 
       setTimeout(() => setCatState("sleep"), 2000);
-    }, 15000);
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 

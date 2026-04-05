@@ -164,29 +164,31 @@ const About = () => {
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ staggerChildren: 0.15 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 place-items-center sm:place-items-start"
+              // FIX: Replaced strict grid with a flexible wrapping layout
+              className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6"
             >
               {infoList.map(({ iconDark, title, description }, index) => (
                 <motion.li
                   variants={listItemVariants}
                   whileHover={{ y: -10, scale: 1.05 }}
                   key={index}
-                  className="relative group rounded-full cursor-pointer w-full max-w-[220px] aspect-square flex border border-cyan-500/30 bg-[#030712]/50 hover:bg-cyan-500/5 hover:border-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.25)] transition-all duration-300 backdrop-blur-md"
+                  // FIX: Removed w-full & aspect-square. Used exact, responsive dimensions and shrink-0 to prevent compression
+                  className="relative group rounded-full cursor-pointer shrink-0 w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] flex border border-cyan-500/30 bg-[#030712]/50 hover:bg-cyan-500/5 hover:border-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.25)] transition-all duration-300 backdrop-blur-md overflow-hidden"
                 >
-                  <div className="relative w-full h-full p-5 flex flex-col items-center justify-center text-center z-10">
+                  <div className="relative w-full h-full p-2 sm:p-4 flex flex-col items-center justify-center text-center z-10">
                     <div className="absolute inset-0 bg-blue-500/0 rounded-full blur-2xl group-hover:bg-cyan-400/10 transition-colors duration-500 pointer-events-none" />
 
-                    <div className="p-4 border border-cyan-800/50 bg-transparent rounded-full mb-3 group-hover:scale-110 group-hover:border-cyan-400 transition-all duration-300 z-20">
+                    <div className="p-3 sm:p-4 border border-cyan-800/50 bg-transparent rounded-full mb-1 sm:mb-2 group-hover:scale-110 group-hover:border-cyan-400 transition-all duration-300 z-20">
                       <Image
                         src={iconDark || assets.code_icon_dark}
                         alt={title}
-                        className="w-7 h-7 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"
+                        className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"
                       />
                     </div>
-                    <h3 className="font-bold text-white text-md mb-1 z-20 group-hover:text-cyan-300 transition-colors">
+                    <h3 className="font-bold text-white text-xs sm:text-sm md:text-md mb-1 z-20 group-hover:text-cyan-300 transition-colors leading-tight">
                       {title}
                     </h3>
-                    <p className="text-xs text-gray-400 opacity-80 group-hover:opacity-100 group-hover:text-cyan-100 transition-all z-20 px-2">
+                    <p className="text-[10px] sm:text-xs text-gray-400 opacity-80 group-hover:opacity-100 group-hover:text-cyan-100 transition-all z-20 px-1 sm:px-2 leading-tight">
                       {description}
                     </p>
                   </div>
@@ -210,7 +212,7 @@ const About = () => {
               {experiences.map((exp, index) => (
                 <div
                   key={index}
-                  className="flex flex-col md:flex-row gap-6 items-start relative z-10"
+                  className="flex flex-col md:flex-row gap-6 items-start relative z-10 mb-8 last:mb-0"
                 >
                   <div className="w-16 h-16 rounded-xl bg-black/50 flex-shrink-0 flex items-center justify-center p-2 border border-cyan-500/20 backdrop-blur-sm shadow-inner group-hover:border-cyan-400/50 transition-colors">
                     <Image
@@ -224,7 +226,7 @@ const About = () => {
                       <h4 className="text-xl font-bold text-white">
                         {exp.title}
                       </h4>
-                      <span className="text-sm px-3 py-1 bg-blue-500/10 text-cyan-400 rounded-full font-medium border border-cyan-500/20 shadow-[0_0_10px_rgba(34,211,238,0.1)]">
+                      <span className="text-sm px-3 py-1 bg-blue-500/10 text-cyan-400 rounded-full font-medium border border-cyan-500/20 shadow-[0_0_10px_rgba(34,211,238,0.1)] w-max">
                         {exp.company}
                       </span>
                       <span className="text-sm text-gray-500 md:ml-auto font-medium font-mono">
