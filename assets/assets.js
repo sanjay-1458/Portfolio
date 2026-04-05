@@ -12,6 +12,7 @@ import work1 from "./public/work-1.png";
 import work2 from "./public/work-2.png";
 import work3 from "./public/work-3.png";
 import work4 from "./public/work-4.png";
+import work5 from "./public/work-5.png";
 import github from "./github.png";
 import jenkins from "./jenkins.png";
 import firebase from "./firebase.png";
@@ -21,6 +22,17 @@ import mongodb from "./mongodb.png";
 import right_arrow_white from "./right-arrow-white.png";
 import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
+import cpp from "./cpp.png";
+import java from "./java.png";
+import python from "./python.png";
+import next from "./next.png";
+import nest from "./nest.png";
+import fastapi from "./fastapi.png";
+import langchain from "./langchain.png";
+import n8n from "./n8n.png";
+import redux from "./redux.png";
+import postgre from "./postgre.png";
+import pinecone from "./pinecone.png";
 import mail_icon from "./mail_icon.png";
 import mail_icon_dark from "./mail_icon_dark.png";
 import profile_img from "./user-image.png";
@@ -109,9 +121,29 @@ export const assets = {
   git_icon,
   github_icon,
   play_icon,
+  work5,
+  cpp,
+  java,
+  nest,
+  next,
+  fastapi,
+  langchain,
+  n8n,
+  redux,
+  postgre,
+  pinecone,
 };
 
 export const workData = [
+  {
+    title: "Autonomous Meeting Scheduling App",
+    description:
+      "Engineered an autonomous AI scheduling platform that parses emails, sync calendar and chat via AI assistnat to create/reschedule events. ",
+    bgImage: assets.work5,
+    github_link: "https://github.com/sanjay-1458/VoloNexus.AI",
+    link: "https://volo-nexus-ai.vercel.app/",
+    tags: ["Next.js", "NestJS", "Pinecone", "MongoDB"],
+  },
   {
     title: "Movie Ticket Booking App",
     description:
@@ -155,19 +187,19 @@ export const infoList = [
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: "Languages",
-    description: "C, C++, JavaScript, TypeScript",
+    description: "C++ • Java • TypeScript • Python",
   },
   {
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
-    title: "Education",
-    description: "B.Tech in Computer Science",
+    title: "AI & Automation",
+    description: "LangChain • FastAPI • n8n • RAG • LLM Orchestration",
   },
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
-    title: "Projects",
-    description: "Built projects using MERN stack",
+    title: "Focus",
+    description: "AI Agents • Distributed Systems • Full-Stack Engineering",
   },
 ];
 
@@ -183,7 +215,7 @@ export const profiles = [
   {
     platform: "LeetCode",
     description:
-      "Knight on LeetCode with peak rating 1900+; ranked 1033 globally in Bi-Weekly Contest 155.",
+      "Knight on LeetCode with peak rating 2000+; ranked 387 globally in Bi-Weekly Contest 387.",
     url: "https://leetcode.com/u/st2147/",
   },
 ];
@@ -194,8 +226,8 @@ export const experiences = [
     logo: assets.autodesk,
     duration: "July 2024 – Dec 2024",
     work: [
-"Developed a Node.js automation script to automatically validate and align dependency versions across microservices, eliminating version conflict before deployment.",
-"Refactored the core legacy module into modular, reusable components, improving separation of concerns, reducing code complexity and improving testability and long-term maintainability."
+      "Developed a Node.js automation script to automatically validate and align dependency versions across microservices, eliminating version conflict before deployment.",
+      "Refactored the core legacy module into modular, reusable components, improving separation of concerns, reducing code complexity and improving testability and long-term maintainability.",
     ],
   },
 ];
